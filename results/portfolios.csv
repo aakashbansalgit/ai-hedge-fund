@@ -1,0 +1,6 @@
+,annual_return,annual_vol,return_to_vol,max_drawdown,annual_turnover,active_return,tracking_error,information_ratio
+"equal weight, long only",0.1028,0.1384,0.7794,0.3598,13.0968,-0.0009,0.0611,-0.0148
+"equal weight, long-short",-0.0220,0.1182,-0.1288,0.4736,24.4839,,,
+"ridge, long only",0.0929,0.1536,0.6583,0.5026,12.7097,-0.0077,0.0636,-0.1212
+"ridge, long-short",-0.0292,0.1162,-0.1956,0.5451,25.4194,,,
+sector equal weight,0.1024,0.1472,0.7392,0.4912,0.0000,,,
