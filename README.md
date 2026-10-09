@@ -1,5 +1,10 @@
-# ai-hedge-fund
+# sector-signal-backtest
 
+[![tests](https://github.com/aakashbansalgit/sector-signal-backtest/actions/workflows/tests.yml/badge.svg)](https://github.com/aakashbansalgit/sector-signal-backtest/actions/workflows/tests.yml)
+
+Five classic technical signals, tested without look-ahead on the nine S&P sector funds from 2005 to 2025. None predicts next month's returns significantly, and a learned combination does worse than a plain average.
+
+![](figures/long_only.png)
 A small systematic fund built as a set of independent signal agents, a portfolio manager that combines them, and a backtester that is strict about time. It rotates among the nine original S&P 500 sector funds once a month from 2005 to August 2025.
 
 ## How it works
