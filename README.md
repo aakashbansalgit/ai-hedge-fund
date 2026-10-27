@@ -21,7 +21,7 @@ A small systematic fund built as a set of independent signal agents, a portfolio
 
 The universe is the nine SPDR sector funds that have traded since 1998, so no fund is in the sample because it survived. `tests/test_no_lookahead.py` changes every price after a month end and checks that no agent score and no ridge forecast for that month moves, and that later forecasts do move, so the test can fail.
 
-An earlier version of this repo pulled news headlines, company fundamentals and Google Trends. Those APIs return today's values, not what was known on a past date, so a backtest built on them would have used information from the future. I took them out rather than keep a strategy that could not be tested honestly.
+There are no news, fundamentals or Google Trends signals. Those APIs return today's values, not what was known on a past date, so a backtest built on them would use information from the future.
 
 ## Results
 
