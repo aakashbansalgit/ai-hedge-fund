@@ -49,11 +49,20 @@ None of these signals predicts sector returns with any reliability. The best, RS
 
 The learned combination does worse than the plain average. With nine assets a month, each IC has a standard deviation of about 0.45, so five years of data cannot tell a weight of 0.002 from noise, and the ridge spends its time chasing it. `figures/ridge_coefficients.png` shows three of the five weights crossing zero repeatedly, and only RSI staying positive in most months. The fundamental law of active management puts it in numbers: information ratio is roughly IC times the square root of breadth, and nine bets a month gives an IC of 0.04 almost nothing to work with. The way forward is more breadth, hundreds of stocks rather than nine sectors, not a cleverer combiner.
 
+## Live paper portfolio
+
+`fund/live.py` runs the same rules forward. In the first days of each month the agents score the nine sectors on the last month-end close, and both combinations pick their top three. The picks are committed before the month's returns exist, and a later run fills in how they did against holding all nine. Given the backtest, the honest expectation is that the picks roughly match the benchmark. This checks whether that holds out of sample.
+
+<!-- live:start -->
+The first picks will be made in the first days of November 2026.
+<!-- live:end -->
+
 ## Running it
 
 ```
 pip install numpy pandas scipy scikit-learn matplotlib yfinance
 python -m fund.backtest
+python -m fund.live          # this month's picks, and last month's returns
 python tests/test_no_lookahead.py
 ```
 
